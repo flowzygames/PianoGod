@@ -1,15 +1,202 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>PianoGod</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PianoGod — Mini FL Studio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h1>PianoGod 🎹</h1>
-<input type="file" id="audioFile">
-<div id="piano"></div>
-<script src="https://unpkg.com/tone"></script>
-<script src="app.js"></script>
+  <div class="app-shell">
+    <header class="topbar panel glass">
+      <div>
+        <p class="eyebrow">PianoGod</p>
+        <h1>Mini FL-style piano workstation</h1>
+      </div>
+      <div class="transport">
+        <button id="playDemoBtn" class="primary-btn">Play Demo</button>
+        <button id="stopAllBtn" class="secondary-btn">Stop</button>
+        <button id="panicBtn" class="secondary-btn">Panic</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="left-column">
+        <div class="panel hero-panel glass">
+          <div class="hero-copy">
+            <p class="eyebrow">Browser DAW energy</p>
+            <h2>Play keys, shape synths, drop drums, load MP3s, and feed it MIDI.</h2>
+            <p>
+              PianoGod mixes a glowing piano, a synth engine, audio file playback, MIDI file parsing,
+              a live visualizer, and a step sequencer into one big control room.
+            </p>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <span>Keys</span>
+              <strong>24</strong>
+            </div>
+            <div class="stat-card">
+              <span>Sequencer</span>
+              <strong>16-step</strong>
+            </div>
+            <div class="stat-card">
+              <span>Modes</span>
+              <strong>4 synths</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel controls-grid glass">
+          <section class="subpanel">
+            <div class="subpanel-header">
+              <h3>Instrument Rack</h3>
+              <span class="chip">Tone.js powered</span>
+            </div>
+
+            <label class="control-row">
+              <span>Engine</span>
+              <select id="engineSelect">
+                <option value="synth">Classic Synth</option>
+                <option value="amsynth">AM Synth</option>
+                <option value="fmsynth">FM Synth</option>
+                <option value="duosynth">Duo Synth</option>
+              </select>
+            </label>
+
+            <label class="control-row">
+              <span>Waveform</span>
+              <select id="waveformSelect">
+                <option value="sine">Sine</option>
+                <option value="triangle">Triangle</option>
+                <option value="square">Square</option>
+                <option value="sawtooth" selected>Sawtooth</option>
+              </select>
+            </label>
+
+            <label class="slider-row">
+              <span>Attack</span>
+              <input id="attackSlider" type="range" min="0.001" max="2" step="0.001" value="0.02">
+              <strong id="attackValue">0.02s</strong>
+            </label>
+
+            <label class="slider-row">
+              <span>Release</span>
+              <input id="releaseSlider" type="range" min="0.05" max="4" step="0.05" value="1.2">
+              <strong id="releaseValue">1.20s</strong>
+            </label>
+
+            <label class="slider-row">
+              <span>Filter</span>
+              <input id="filterSlider" type="range" min="200" max="6000" step="10" value="2400">
+              <strong id="filterValue">2400 Hz</strong>
+            </label>
+
+            <label class="slider-row">
+              <span>Reverb</span>
+              <input id="reverbSlider" type="range" min="0" max="1" step="0.01" value="0.28">
+              <strong id="reverbValue">28%</strong>
+            </label>
+          </section>
+
+          <section class="subpanel">
+            <div class="subpanel-header">
+              <h3>Media Bay</h3>
+              <span class="chip">MP3 + MIDI</span>
+            </div>
+
+            <label class="file-box">
+              <span>Audio File</span>
+              <input type="file" id="audioFile" accept="audio/*">
+            </label>
+
+            <div class="button-row">
+              <button id="playAudioBtn" class="primary-btn">Play Audio</button>
+              <button id="stopAudioBtn" class="secondary-btn">Stop Audio</button>
+            </div>
+
+            <label class="file-box">
+              <span>MIDI File</span>
+              <input type="file" id="midiFile" accept=".mid,.midi,audio/midi">
+            </label>
+
+            <div class="button-row">
+              <button id="playMidiBtn" class="primary-btn">Play MIDI</button>
+              <button id="clearMidiBtn" class="secondary-btn">Clear MIDI</button>
+            </div>
+
+            <div class="status-stack">
+              <div class="status-card">
+                <span>Audio status</span>
+                <strong id="audioStatus">No audio loaded</strong>
+              </div>
+              <div class="status-card">
+                <span>MIDI status</span>
+                <strong id="midiStatus">No MIDI loaded</strong>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="panel piano-panel glass">
+          <div class="subpanel-header">
+            <h3>Performance Keyboard</h3>
+            <span class="chip">Computer keys supported</span>
+          </div>
+          <div class="keyboard-hint">
+            Use: A W S E D F T G Y H U J K
+          </div>
+          <div id="piano" class="piano"></div>
+        </div>
+      </section>
+
+      <aside class="right-column">
+        <div class="panel visualizer-panel glass">
+          <div class="subpanel-header">
+            <h3>Spectrum</h3>
+            <span id="nowPlaying" class="chip">Idle</span>
+          </div>
+          <canvas id="visualizer" width="420" height="220"></canvas>
+        </div>
+
+        <div class="panel sequencer-panel glass">
+          <div class="subpanel-header">
+            <h3>Beat Matrix</h3>
+            <div class="inline-controls">
+              <label>
+                BPM
+                <input id="bpmInput" type="number" min="60" max="180" value="118">
+              </label>
+              <button id="toggleSequencerBtn" class="primary-btn">Start Beat</button>
+            </div>
+          </div>
+          <div class="sequencer-legend">
+            <span>Kick</span>
+            <span>Snare</span>
+            <span>Hat</span>
+            <span>Clap</span>
+          </div>
+          <div id="sequencerGrid" class="sequencer-grid"></div>
+        </div>
+
+        <div class="panel tips-panel glass">
+          <div class="subpanel-header">
+            <h3>Quick Ideas</h3>
+            <span class="chip">Starter moves</span>
+          </div>
+          <ul class="tips-list">
+            <li>Switch to FM Synth and crank the filter for a bright arcade lead.</li>
+            <li>Load an MP3 and tap the keys over it like a sketchpad.</li>
+            <li>Import a MIDI file to hear it through whichever synth engine is active.</li>
+            <li>Start the beat matrix, then layer notes on top like a tiny browser studio.</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/tone@14.7.77/build/Tone.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tonejs/midi@2.0.28/build/Midi.min.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
