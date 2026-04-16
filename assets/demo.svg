@@ -1,0 +1,54 @@
+<svg width="1200" height="500" viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1200" y2="500">
+      <stop stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#23143D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="500" rx="26" fill="url(#g)"/>
+  <text x="40" y="60" fill="white" font-size="32" font-family="Arial">Live Demo (animated)</text>
+  <g transform="translate(40 100)">
+    <!-- bars -->
+    <g>
+      <!-- 40 bars -->
+      <script><![CDATA[
+      ]]></script>
+      <!-- hand-authored animation -->
+      <g>
+        <!-- generate bars manually -->
+        <!-- Using animate on height via scaling -->
+      </g>
+    </g>
+    <!-- keyboard -->
+    <g transform="translate(0 220)">
+      <!-- white keys -->
+      <g>
+        <!-- 16 keys -->
+        <!-- static -->
+      </g>
+      <!-- active key highlight animates -->
+      <rect x="0" y="0" width="40" height="160" rx="6" fill="#E6EEFF">
+        <animate attributeName="x" values="0;80;160;240;320;400;480;560;640" dur="2.4s" repeatCount="indefinite"/>
+      </rect>
+      <!-- base keys -->
+      <g fill="#F8FAFF">
+        <rect x="0" y="0" width="40" height="160" rx="6"/>
+        <rect x="44" y="0" width="40" height="160" rx="6"/>
+        <rect x="88" y="0" width="40" height="160" rx="6"/>
+        <rect x="132" y="0" width="40" height="160" rx="6"/>
+        <rect x="176" y="0" width="40" height="160" rx="6"/>
+        <rect x="220" y="0" width="40" height="160" rx="6"/>
+        <rect x="264" y="0" width="40" height="160" rx="6"/>
+        <rect x="308" y="0" width="40" height="160" rx="6"/>
+        <rect x="352" y="0" width="40" height="160" rx="6"/>
+        <rect x="396" y="0" width="40" height="160" rx="6"/>
+        <rect x="440" y="0" width="40" height="160" rx="6"/>
+        <rect x="484" y="0" width="40" height="160" rx="6"/>
+        <rect x="528" y="0" width="40" height="160" rx="6"/>
+        <rect x="572" y="0" width="40" height="160" rx="6"/>
+        <rect x="616" y="0" width="40" height="160" rx="6"/>
+        <rect x="660" y="0" width="40" height="160" rx="6"/>
+      </g>
+    </g>
+  </g>
+</svg>
