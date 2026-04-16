@@ -1,52 +1,33 @@
-<p align="center">
-  <img src="assets/banner.svg" />
-</p>
-
+<p align="center"><img src="assets/banner.svg"/></p>
 <h1 align="center">PianoGod</h1>
-
-<p align="center">
-A browser piano + synth playground with MP3 and MIDI support.
-</p>
+<p align="center">Mini FL Studio in your browser</p>
 
 ---
 
 ## Demo
-
-<p align="center">
-  <img src="assets/demo.svg" />
-</p>
+<img src="assets/demo.svg"/>
+<img src="assets/demo.svg"/>
+<img src="assets/demo.svg"/>
+<img src="assets/demo.svg"/>
+<img src="assets/demo.svg"/>
 
 ---
 
-## Preview
-
-<p align="center">
-  <img src="assets/preview.svg" width="90%" />
-</p>
+## Screenshots
+<img src="assets/preview.svg"/>
+<img src="assets/preview.svg"/>
+<img src="assets/preview.svg"/>
+<img src="assets/preview.svg"/>
+<img src="assets/preview.svg"/>
 
 ---
 
 ## Features
-
-- Playable piano
+- Piano
+- Synth
+- Visualizer
 - MP3 playback
-- Synth engine
-- Clean UI
 
 ---
 
-## Run
-
-Open index.html
-
----
-
-## Roadmap
-
-- MIDI support
-- Recording
-- Better UI
-
----
-
-Made with chaos.
+Run: open index.html
