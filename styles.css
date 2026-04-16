@@ -1,3 +1,1 @@
-body { font-family: Arial; text-align:center; background:#111; color:white; }
-#piano { display:flex; justify-content:center; margin-top:20px; }
-.key { width:40px; height:150px; background:white; border:1px solid black; }
+:root { --bg: #090b13; } body { margin:0; background:#090b13; color:white; font-family:Arial;}
