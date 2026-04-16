@@ -1,22 +1,52 @@
-# 🎹 PianoGod
+<p align="center">
+  <img src="assets/banner.svg" />
+</p>
 
-The ultimate web piano + synth + audio playground.
+<h1 align="center">PianoGod</h1>
 
-## ✨ Features
+<p align="center">
+A browser piano + synth playground with MP3 and MIDI support.
+</p>
+
+---
+
+## Demo
+
+<p align="center">
+  <img src="assets/demo.svg" />
+</p>
+
+---
+
+## Preview
+
+<p align="center">
+  <img src="assets/preview.svg" width="90%" />
+</p>
+
+---
+
+## Features
+
 - Playable piano
-- MP3 support
-- Synth engine (Tone.js)
+- MP3 playback
+- Synth engine
 - Clean UI
 
-## 🚀 Run
-Just open index.html
+---
 
-## 📸 Preview
-(Add screenshots here later)
+## Run
 
-## 💡 Future Plans
+Open index.html
+
+---
+
+## Roadmap
+
 - MIDI support
-- Effects
 - Recording
+- Better UI
 
-Made with chaos and ambition.
+---
+
+Made with chaos.
