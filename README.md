@@ -3,13 +3,11 @@
 <p align="center">Mini FL Studio in your browser</p>
 
 ---
+## Why use this
+-i dont know
+- this dosent even work rn
+- its only html/very lightweight
 
-## Demo
-<img src="assets/demo.svg"/>
-<img src="assets/demo.svg"/>
-<img src="assets/demo.svg"/>
-<img src="assets/demo.svg"/>
-<img src="assets/demo.svg"/>
 
 ---
 
