@@ -1,5 +1,5 @@
 <p align="center"><img src="assets/banner.svg"/></p>
-<h1 align="center">PianoGod</h1>
+<h1 align="center">PianoGod (UNFINISHED)</h1>
 <p align="center">Mini FL Studio in your browser</p>
 
 ---
