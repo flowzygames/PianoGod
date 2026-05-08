@@ -1,27 +1,40 @@
 <p align="center"><img src="assets/banner.svg" alt="PianoGod banner" width="100%" /></p>
 
 <h1 align="center">PianoGod</h1>
-<p align="center"><strong>A lightweight browser music sketchpad for piano, synth, playback, and visual experiments.</strong></p>
+<p align="center"><strong>A random browser music experiment that is not in development and will not be fixed.</strong></p>
 
 <p align="center">
-  <img alt="Status" src="https://img.shields.io/badge/status-prototype-7C3AED?style=for-the-badge" />
-  <img alt="Frontend" src="https://img.shields.io/badge/frontend-HTML%20%2B%20CSS%20%2B%20JS-0EA5E9?style=for-the-badge" />
-  <img alt="Runs in browser" src="https://img.shields.io/badge/runs%20in-browser-22C55E?style=for-the-badge" />
+  <img alt="Status" src="https://img.shields.io/badge/status-abandoned-DC2626?style=for-the-badge" />
+  <img alt="Maintenance" src="https://img.shields.io/badge/maintenance-none-111827?style=for-the-badge" />
+  <img alt="Roadmap" src="https://img.shields.io/badge/roadmap-nope-7C3AED?style=for-the-badge" />
 </p>
 
-## Overview
+## What This Is
 
-PianoGod is an early browser-based music playground built around fast loading, simple controls, and creative audio experiments. The project is intentionally lightweight: open the page, play with the piano and synth tools, and use the visualizer to make the sound feel more alive.
+PianoGod is a random browser music thing I made and put on GitHub. It is staying here as an artifact, a warning label, and maybe a small museum exhibit for decisions made with confidence and not enough planning.
 
-This is still a prototype, but the direction is clear: a small, approachable music workstation that can grow into something more polished without becoming heavy or complicated.
+It is **not in development**. It is **not going to be fixed**. There is no secret rewrite, no comeback arc, no version 2, and no dramatic training montage where it becomes a real DAW.
 
-## Highlights
+If something works, enjoy the miracle. If something breaks, that is also part of the authentic PianoGod experience.
 
-- Browser-first music interface with no install step.
-- Piano and synth experiments for quick sound sketching.
-- Visualizer support for more expressive playback.
-- MP3 playback support for layering ideas and references.
-- Simple static-file structure that is easy to inspect and modify.
+## What This Is Not
+
+- Not an active project.
+- Not a serious music production tool.
+- Not getting bug fixes.
+- Not getting new features.
+- Not waiting for its big redemption update.
+- Not something you should use if you value peace.
+
+## Things It Claims To Do
+
+| Feature | Reality Check |
+| --- | --- |
+| Piano | Exists in some form. Please clap quietly. |
+| Synth | Technically a word in this README. |
+| Visualizer | May visualize. May simply have vibes. |
+| MP3 playback | If it works for you, treasure that moment. |
+| Full music workstation | Absolutely not. Let's be adults. |
 
 ## Preview
 
@@ -29,26 +42,14 @@ This is still a prototype, but the direction is clear: a small, approachable mus
   <img src="assets/preview.svg" alt="PianoGod interface preview" width="90%" />
 </p>
 
-## Current Features
-
-| Feature | Status |
-| --- | --- |
-| Piano interface | Prototype |
-| Synth controls | Prototype |
-| Audio visualizer | Prototype |
-| MP3 playback | Prototype |
-| Full DAW-style workflow | Planned |
-
 ## Run Locally
 
 Open `index.html` in a browser.
 
-No build step is required for the current prototype.
+That is the whole setup. If it does not work, the official troubleshooting guide is: nod solemnly and move on.
 
-## Roadmap
+## Maintenance Policy
 
-- Improve the instrument controls and playback reliability.
-- Add a cleaner arrangement area for musical ideas.
-- Add save/load support for sketches.
-- Polish the visual style and interaction details.
-- Turn the prototype into a more complete mini music workstation.
+This repo is abandoned on purpose.
+
+No updates are planned. No fixes are planned. No support is planned. The project has been released into the woods metaphorically, but it did not bring a map.
